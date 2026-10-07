@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Toolkit AI ULTRA V4",
+  "version": "4.0.0",
+  "description": "Animated Roblox dashboard, public profile explorer, AI chat, screenshot analysis, prank balance, tools and extensive settings.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "host_permissions": [
+    "https://www.roblox.com/*",
+    "https://users.roblox.com/*",
+    "https://friends.roblox.com/*",
+    "https://groups.roblox.com/*",
+    "https://games.roblox.com/*",
+    "https://thumbnails.roblox.com/*",
+    "https://inventory.roblox.com/*",
+    "https://badges.roblox.com/*",
+    "https://premiumfeatures.roblox.com/*",
+    "https://api.openai.com/*"
+  ],
+  "action": {"default_title": "Roblox Toolkit AI ULTRA", "default_popup": "popup.html"},
+  "content_scripts": [{"matches": ["https://www.roblox.com/*"], "js": ["content.js"], "run_at": "document_idle"}]
+}
